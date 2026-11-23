@@ -1,0 +1,9 @@
+{
+  "name": "PRASHANT IPL AUCTION 3D",
+  "short_name": "PRASHANT IPL",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "orientation": "landscape"
+}

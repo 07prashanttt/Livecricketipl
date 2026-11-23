@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#07111f">
+  <title>PRASHANT IPL AUCTION 3D</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="game">
+    <canvas id="stadium"></canvas>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">P</span><div><b>PRASHANT IPL AUCTION 3D</b><small>3D CRICKET ARENA</small></div></div>
+      <div class="match-meta"><span id="inningsLabel">1ST INNINGS</span><b id="overLabel">0.0 / 2 OV</b></div>
+    </header>
+
+    <section class="scoreboard">
+      <div><small id="battingTeam">CSK</small><strong id="score">0/0</strong></div>
+      <div class="score-extra"><span id="runRate">RR 0.00</span><span id="target">TARGET —</span></div>
+      <div class="score-right"><small>STRIKER</small><b id="strikerName">Batter 1</b><small id="batterStats">0 (0)</small></div>
+    </section>
+
+    <div class="center-message" id="message">Choose your controls and bowl the first ball!</div>
+
+    <section class="bottom-panel">
+      <div class="control-tabs">
+        <button class="tab active" data-tab="batting">🏏 BATTING</button>
+        <button class="tab" data-tab="bowling">🎯 BOWLING</button>
+      </div>
+      <div id="battingControls" class="controls">
+        <div class="hint">Watch the ball and tap a shot at the right time.</div>
+        <div class="button-grid">
+          <button class="action shot" data-shot="defend">DEFEND</button>
+          <button class="action shot" data-shot="ground">GROUND</button>
+          <button class="action shot" data-shot="loft">LOFT</button>
+          <button class="action shot" data-shot="sweep">SWEEP</button>
+        </div>
+      </div>
+      <div id="bowlingControls" class="controls hidden">
+        <div class="select-row">
+          <label>LINE<select id="bowlLine"><option value="off">OFF</option><option value="middle">MIDDLE</option><option value="leg">LEG</option></select></label>
+          <label>LENGTH<select id="bowlLength"><option value="good">GOOD</option><option value="short">SHORT</option><option value="full">FULL</option><option value="yorker">YORKER</option></select></label>
+          <label>PACE<select id="bowlPace"><option value="medium">MEDIUM</option><option value="fast">FAST</option><option value="slow">SLOW</option></select></label>
+        </div>
+        <button id="bowlBtn" class="action bowl">⚡ BOWL</button>
+      </div>
+      <div class="footer-controls">
+        <button id="newMatchBtn" class="small-btn">NEW MATCH</button>
+        <button id="pauseBtn" class="small-btn">PAUSE</button>
+        <span id="statusText">Ready</span>
+      </div>
+    </section>
+    <div id="resultModal" class="modal hidden">
+      <div class="modal-card"><div class="trophy">🏆</div><h2 id="resultTitle">MATCH RESULT</h2><p id="resultText"></p><button id="playAgainBtn" class="action bowl">PLAY AGAIN</button></div>
+    </div>
+  </div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
